@@ -44,7 +44,6 @@ import Button from '@/Components/Button'
     
 export default {
     props: {
-        canResetPassword: Boolean,
         errors: Object,
         status: String,
     },

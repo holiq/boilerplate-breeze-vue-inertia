@@ -48,7 +48,6 @@ export default {
         canResetPassword: Boolean,
         errors: Object,
         status: String,
-        error: Object,
     },
     components: {
         AuthCard,
