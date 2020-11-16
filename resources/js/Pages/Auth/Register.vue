@@ -23,6 +23,9 @@
                 <Input type="password" id="password_confirmation" v-model="form.password_confirmation" class="mt-1 block w-full"  />
             </div>
             <div class="flex items-center justify-end mt-4">
+                <inertia-link :href="route('login')" class="underline text-sm text-gray-600 hover:text-gray-900">
+                    Already Registered?
+                </inertia-link>
                 <Button class="ml-4">
                     Register
                 </Button>
