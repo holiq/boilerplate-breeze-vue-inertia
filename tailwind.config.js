@@ -11,6 +11,10 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            screens: {
+                'dark': {'raw': '(prefers-color-scheme: dark)'},
+                // => @media (prefers-color-scheme: dark) { ... }
+            },
         },
     },
 
