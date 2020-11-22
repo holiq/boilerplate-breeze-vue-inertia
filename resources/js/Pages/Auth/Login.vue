@@ -1,13 +1,15 @@
 <template>
     <AuthCard>
         <template v-slot:logo>
-            <AplicationLogo class="w-20 h-20 fill-current text-gray-500" />
-        </template>        
+            <inertia-link :href="route('index')">
+                <AplicationLogo class="w-20 h-20 fill-current text-gray-500" />
+            </inertia-link>
+        </template>
         <AuthSessionStatus class="mb-4" :status="status" />
         <AuthValidationErrors class="mb-4" :errors="errors" />
         <form @submit.prevent="login">
             <div class="mb-4">
-                <Label for="email" value="Email"/>
+                <Label for="email" value="Email" />
                 <Input type="email" id="email" v-model="form.email" class="mt-1 block w-full"  autofocus />
             </div>
             <div class="mb-4">
@@ -31,58 +33,56 @@
         </form>
     </AuthCard>
 </template>
-
 <script>
-import { Inertia } from '@inertiajs/inertia'
-
-import AuthCard from '@/Components/AuthCard'
-import AplicationLogo from '@/Components/AplicationLogo'
-import AuthValidationErrors from '@/Components/AuthValidationErrors'
-import AuthSessionStatus from '@/Components/AuthSessionStatus'
-import Label from '@/Components/Label'
-import Input from '@/Components/Input'
-import Button from '@/Components/Button'
+    import { Inertia } from '@inertiajs/inertia'
     
-export default {
-    props: {
-        canResetPassword: Boolean,
-        errors: Object,
-        status: String,
-    },
-    components: {
-        AuthCard,
-        AplicationLogo,
-        AuthValidationErrors,
-        AuthSessionStatus,
-        Label,
-        Input,
-        Button,
-    },
-    data() {
-        return {
-            form: {
-                email: '',
-                password: '',
-                remember: false,
-            },
-        };
-    },
-    methods: {
-        login() {
-            Inertia.post('/login', this.form, {
-                preserveScroll: true,
-                onProgress: (form) => {
-                    document.querySelector('Button').classList.add('cursor-not-allowed', 'opacity-25');
-                },
-                onFinish: (form) => {
-                    document.querySelector('Button').classList.remove('cursor-not-allowed', 'opacity-25');
-                },
-            });
+    import AuthCard from '@/Components/AuthCard'
+    import AplicationLogo from '@/Components/AplicationLogo'
+    import AuthValidationErrors from '@/Components/AuthValidationErrors'
+    import AuthSessionStatus from '@/Components/AuthSessionStatus'
+    import Label from '@/Components/Label'
+    import Input from '@/Components/Input'
+    import Button from '@/Components/Button'
+        
+    export default {
+        props: {
+            canResetPassword: Boolean,
+            errors: Object,
+            status: String,
         },
-    },
-    metaInfo: {
-        title: 'Login',
-    },
-};
-
+        components: {
+            AuthCard,
+            AplicationLogo,
+            AuthValidationErrors,
+            AuthSessionStatus,
+            Label,
+            Input,
+            Button,
+        },
+        data() {
+            return {
+                form: {
+                    email: '',
+                    password: '',
+                    remember: false,
+                },
+            };
+        },
+        methods: {
+            login() {
+                Inertia.post('/login', this.form, {
+                    preserveScroll: true,
+                    onProgress: (form) => {
+                        document.querySelector('Button').classList.add('cursor-not-allowed', 'opacity-25');
+                    },
+                    onFinish: (form) => {
+                        document.querySelector('Button').classList.remove('cursor-not-allowed', 'opacity-25');
+                    },
+                });
+            },
+        },
+        metaInfo: {
+            title: 'Login',
+        },
+    };
 </script>

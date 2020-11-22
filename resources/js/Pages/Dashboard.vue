@@ -18,13 +18,16 @@
     </AppLayout>
 </template>
 <script>
-import { Inertia } from '@inertiajs/inertia'
+    import { Inertia } from '@inertiajs/inertia'
 
-import AppLayout from '@/Layouts/AppLayout'
+    import AppLayout from '@/Layouts/AppLayout'
 
-export default {
-    components: {
-        AppLayout,
+    export default {
+        components: {
+            AppLayout,
+        },
+        metaInfo: {
+            title: 'Dahsboard',
+        },
     }
-}
 </script>
