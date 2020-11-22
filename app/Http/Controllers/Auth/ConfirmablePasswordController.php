@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class ConfirmablePasswordController extends Controller
 {
@@ -17,7 +18,7 @@ class ConfirmablePasswordController extends Controller
      */
     public function show(Request $request)
     {
-        return view('auth.confirm-password');
+        return Inertia::render('Auth/ConfirmPassword');
     }
 
     /**
@@ -33,7 +34,7 @@ class ConfirmablePasswordController extends Controller
             'password' => $request->password,
         ])) {
             return back()->withErrors([
-                'password' => __('auth.password')
+                'password' => __('validation.password')
             ]);
         }
 
