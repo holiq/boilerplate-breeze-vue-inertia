@@ -101,17 +101,13 @@
             ResponsiveNavLink,
         },
         data() {
-                return {
-                    showingNavigationDropdown: false,
-                }
-            },
+            return {
+                showingNavigationDropdown: false,
+            }
+        },
         methods: {
             logout() {
-                Inertia.post('/logout', this.form, {
-                    onSuccess: () => {
-                        window.location.href = "/";
-                    }
-                });
+                Inertia.post('/logout', this.form);
             },
         }
     }

@@ -3008,7 +3008,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     type: {
@@ -3029,9 +3028,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
 //
 //
 //
@@ -3131,8 +3127,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['href', 'as']
 });
@@ -3148,7 +3142,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -3172,7 +3165,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -3204,8 +3196,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['active', 'href', 'as'],
   computed: {
@@ -3226,8 +3216,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -3411,11 +3399,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     logout: function logout() {
-      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__["Inertia"].post('/logout', this.form, {
-        onSuccess: function onSuccess() {
-          window.location.href = "/";
-        }
-      });
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__["Inertia"].post('/logout', this.form);
     }
   }
 });

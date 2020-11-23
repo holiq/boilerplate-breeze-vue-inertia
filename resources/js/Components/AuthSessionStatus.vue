@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-export default {
-    props: ['status'],
-}
+    export default {
+        props: ['status'],
+    }
 </script>
