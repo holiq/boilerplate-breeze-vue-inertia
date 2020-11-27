@@ -34,7 +34,7 @@ class ConfirmablePasswordController extends Controller
             'password' => $request->password,
         ])) {
             return back()->withErrors([
-                'password' => __('validation.password')
+                'password' => __('auth.password')
             ]);
         }
 
