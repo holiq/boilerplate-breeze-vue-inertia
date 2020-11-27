@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <button :class="classes" class="w-full text-left" v-if="as == 'button'">
-            <slot></slot>
-        </button>
-        <inertia-link :href="href" :class="classes" v-else>
-            <slot></slot>
-        </inertia-link>
-    </div>
+    <button :class="classes" class="w-full text-left" v-if="as == 'button'">
+        <slot></slot>
+    </button>
+    <inertia-link :href="href" :class="classes" v-else>
+        <slot></slot>
+    </inertia-link>
 </template>
 <script>
     export default {
