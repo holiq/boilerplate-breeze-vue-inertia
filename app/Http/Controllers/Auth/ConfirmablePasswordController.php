@@ -14,7 +14,7 @@ class ConfirmablePasswordController extends Controller
      * Show the confirm password view.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * @return \Inertia\Inertia
      */
     public function show(Request $request)
     {
@@ -34,7 +34,7 @@ class ConfirmablePasswordController extends Controller
             'password' => $request->password,
         ])) {
             return back()->withErrors([
-                'password' => __('auth.password')
+                'password' => __('auth.password'),
             ]);
         }
 

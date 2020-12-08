@@ -15,7 +15,7 @@ class AuthenticatedSessionController extends Controller
     /**
      * Display the login view.
      *
-     * @return \Illuminate\View\View
+     * @return \Inertia\Inertia
      */
     public function create()
     {

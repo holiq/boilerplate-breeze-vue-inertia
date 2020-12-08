@@ -16,7 +16,7 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      *
-     * @return \Illuminate\View\View
+     * @return \Inertia\Inertia;
      */
     public function create()
     {

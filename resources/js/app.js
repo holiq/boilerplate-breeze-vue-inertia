@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('alpinejs');
 
 import { App, plugin } from '@inertiajs/inertia-vue'
 import VueMeta from 'vue-meta'
@@ -18,4 +19,3 @@ new Vue({
         },
     }),
 }).$mount(el)
-
